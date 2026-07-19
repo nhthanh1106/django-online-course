@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap styling để AI nhận diện -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Course Details</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Django template tags để hiển thị -->
+        <h1>{{ course.name }}</h1>
+        <ul>
+        {% for lesson in course.lesson_set.all %}
+            <li>{{ lesson.title }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
